@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Mohammed Ait El Qadi — DevOps & Platform Engineer</title>
+<meta name="description" content="Mohammed Ait El Qadi. DevOps & Platform Engineer in Budapest. I build and automate the cloud platforms AI runs on: AWS, Azure, Terraform, Kubernetes, MCP servers.">
+<meta property="og:title" content="Mohammed Ait El Qadi — DevOps & Platform Engineer">
+<meta property="og:description" content="I build and automate the cloud platforms AI runs on.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://d2ol7oe51mr4n9.cloudfront.net/user_3CJMuJl0OY7Xa3k4MgVByjcNHBo/d9ec109c-f736-4926-a4a6-7b21ecc49bc5.png">
+<link rel="canonical" href="https://aitelqadimo.github.io/AitelqadiMo/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Mohammed Ait El Qadi","jobTitle":"DevOps & Platform Engineer","address":{"@type":"PostalAddress","addressLocality":"Budapest","addressCountry":"HU"},"email":"mailto:aitelqadi22@gmail.com","sameAs":["https://github.com/AitelqadiMo","https://www.linkedin.com/in/mohammed-ait-el-qadi"]}
+</script>
+<style>
+:root{
+  --ink:#0a0b0a; --ink-2:#0e100e; --ink-3:#141714;
+  --emerald:#17c07f; --emerald-hi:#42e8a4; --emerald-dim:rgba(23,192,127,.35);
+  --cream:#ece5d8; --cream-dim:rgba(236,229,216,.55); --cream-faint:rgba(236,229,216,.14);
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --body:'Space Grotesk',system-ui,sans-serif;
+  --disp:'Anton',impact,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scrollbar-width:thin;scrollbar-color:var(--emerald) var(--ink)}
+html,body{background:var(--ink)}
+body{color:var(--cream);font-family:var(--body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--emerald);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+button{font:inherit;border:0;background:none;cursor:pointer}
+
+/* ---------- PRELOADER ---------- */
+#loader{position:fixed;inset:0;z-index:200;background:var(--ink);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1.2rem;transition:opacity .7s ease,visibility .7s}
+#loader.done{opacity:0;visibility:hidden}
+#loader .mark{font-family:var(--disp);font-size:clamp(3rem,8vw,5rem);letter-spacing:.04em;color:var(--cream)}
+#loader .mark span{color:var(--emerald)}
+#loader .bar{width:min(320px,60vw);height:1px;background:var(--cream-faint);position:relative;overflow:hidden}
+#loader .bar i{position:absolute;inset:0;background:var(--emerald);transform-origin:left;transform:scaleX(0)}
+#loader .pct{font-family:var(--mono);font-size:.7rem;letter-spacing:.35em;color:var(--cream-dim)}
+
+/* ---------- NAV ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.4rem clamp(1.2rem,3vw,2.6rem);font-family:var(--mono);font-size:.72rem;letter-spacing:.32em;mix-blend-mode:difference;color:#fff}
+nav .n-mid{opacity:.75}
+nav a:hover{color:var(--emerald-hi)}
+@media(max-width:700px){nav .n-mid{display:none}}
+
+/* ---------- HERO ---------- */
+#hero{height:420vh;position:relative}
+#hero .stage{position:sticky;top:0;height:100vh;overflow:hidden}
+#orbit{position:absolute;inset:0;width:100%;height:100%;display:block;background:var(--ink)}
+.vignette{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 42%,rgba(4,5,4,.72) 100%)}
+.hero-copy{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;padding:0 4vw;text-align:center}
+.hero-eyebrow{font-family:var(--mono);font-size:clamp(.58rem,1vw,.72rem);letter-spacing:.5em;color:var(--emerald-hi);margin-bottom:2.2vh;opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s ease}
+.hero-eyebrow.on{opacity:1;transform:none}
+.hero-name{font-family:var(--disp);font-size:clamp(3.4rem,12.5vw,11.5rem);line-height:.92;color:var(--cream);text-transform:uppercase;letter-spacing:.14em;transition:letter-spacing .1s linear}
+.hero-name .ln{display:block;white-space:nowrap}
+.hero-name .ch{display:inline-block;opacity:0;transform:translateY(.55em) rotate(4deg);transition:opacity .55s cubic-bezier(.22,1,.36,1),transform .55s cubic-bezier(.22,1,.36,1)}
+.hero-name .ch.on{opacity:1;transform:none}
+.hero-name .sp{display:inline-block;width:.32em}
+.hero-sub{margin-top:3.2vh;font-family:var(--mono);font-size:clamp(.66rem,1.4vw,.92rem);letter-spacing:.24em;color:var(--cream-dim);opacity:0;transform:translateY(16px);transition:opacity .9s ease .1s,transform .9s ease .1s}
+.hero-sub.on{opacity:1;transform:none}
+.hero-sub b{color:var(--emerald-hi);font-weight:600}
+/* HUD */
+.hud{position:absolute;left:0;right:0;bottom:0;padding:1.3rem clamp(1.2rem,3vw,2.6rem);font-family:var(--mono);font-size:.66rem;letter-spacing:.3em;color:var(--cream-dim);display:flex;justify-content:space-between;align-items:flex-end;pointer-events:none}
+.hud .fr{color:var(--emerald-hi)}
+.hud .scroll-cue{display:flex;align-items:center;gap:.7rem;animation:cue 2.4s ease-in-out infinite}
+.hud .scroll-cue.hide{animation:none;opacity:0;transition:opacity .4s ease}
+@keyframes cue{0%,100%{opacity:.9}50%{opacity:.35}}
+.hud-line{position:absolute;left:0;bottom:0;height:2px;width:100%;background:rgba(236,229,216,.08)}
+.hud-line i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--emerald),var(--emerald-hi));transform-origin:left;transform:scaleX(0)}
+
+/* ---------- MARQUEE ---------- */
+.marquee{padding:5.5rem 0 5rem;border-top:1px solid var(--cream-faint);border-bottom:1px solid var(--cream-faint);overflow:hidden;background:var(--ink)}
+.marquee .track{display:flex;gap:3.2rem;width:max-content;animation:mq 36s linear infinite;will-change:transform}
+.marquee span{font-family:var(--disp);font-size:clamp(2.6rem,6vw,5.2rem);text-transform:uppercase;letter-spacing:.05em;color:transparent;-webkit-text-stroke:1px rgba(236,229,216,.34);white-space:nowrap}
+.marquee span.fill{color:var(--emerald);-webkit-text-stroke:0}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- STATS ---------- */
+#stats{padding:clamp(5rem,12vh,9rem) clamp(1.2rem,4vw,3rem);background:var(--ink-2)}
+.sec-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.5em;color:var(--emerald-hi);margin-bottom:3.4rem;display:flex;align-items:center;gap:1.2rem}
+.sec-label:before{content:"";width:2.4rem;height:1px;background:var(--emerald)}
+.stats-grid{display:grid;grid-template-columns:repeat(5,1fr);border-left:1px solid var(--cream-faint)}
+.stat{border-right:1px solid var(--cream-faint);padding:1.6rem 1.4rem 2rem;display:flex;flex-direction:column;gap:1rem;min-height:11rem;justify-content:space-between}
+.stat .num{font-family:var(--disp);font-size:clamp(2.6rem,4.6vw,4.6rem);color:var(--cream);line-height:1}
+.stat .num em{font-style:normal;color:var(--emerald);font-size:.55em}
+.stat .lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;line-height:1.8;color:var(--cream-dim);text-transform:uppercase}
+@media(max-width:980px){.stats-grid{grid-template-columns:repeat(2,1fr);border-top:1px solid var(--cream-faint)}.stat{border-bottom:1px solid var(--cream-faint)}}
+@media(max-width:520px){.stats-grid{grid-template-columns:1fr}}
+
+/* ---------- PILLARS ---------- */
+#pillars{height:340vh;position:relative}
+#pillars .stage{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center}
+#pillars video,#finale video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.5) saturate(1.05)}
+#pillars .shade,#finale .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,7,6,.92) 0%,rgba(6,7,6,.55) 55%,rgba(6,7,6,.25) 100%)}
+.pillar-wrap{position:relative;z-index:2;padding:0 clamp(1.2rem,5vw,4rem);width:100%;max-width:1200px}
+.pillar-idx{font-family:var(--disp);font-size:clamp(7rem,22vh,14rem);line-height:1;color:transparent;-webkit-text-stroke:1px var(--emerald-dim);position:absolute;right:clamp(1rem,4vw,3rem);top:50%;transform:translateY(-50%);pointer-events:none;transition:opacity .5s}
+.pillar{position:absolute;top:50%;transform:translateY(calc(-50% + 40px));opacity:0;transition:opacity .6s ease,transform .6s ease;max-width:34rem;pointer-events:none}
+.pillar.on{opacity:1;transform:translateY(-50%)}
+.pillar .p-tag{font-family:var(--mono);font-size:.66rem;letter-spacing:.4em;color:var(--emerald-hi);margin-bottom:1.1rem}
+.pillar h3{font-family:var(--disp);font-size:clamp(2.6rem,6.2vw,5.4rem);text-transform:uppercase;letter-spacing:.05em;line-height:1;color:var(--cream);margin-bottom:1.4rem}
+.pillar p{font-size:clamp(.95rem,1.4vw,1.12rem);line-height:1.75;color:var(--cream-dim);max-width:30rem}
+.pillar-dots{position:absolute;left:clamp(1.2rem,5vw,4rem);bottom:2.2rem;display:flex;gap:.6rem;z-index:3}
+.pillar-dots i{width:2.2rem;height:2px;background:var(--cream-faint);transition:background .4s}
+.pillar-dots i.on{background:var(--emerald)}
+
+/* ---------- WORK ---------- */
+#work{padding:clamp(5rem,13vh,10rem) clamp(1.2rem,4vw,3rem);background:var(--ink);position:relative}
+.work-head{font-family:var(--disp);font-size:clamp(2.8rem,8vw,7rem);text-transform:uppercase;letter-spacing:.05em;line-height:.95;margin-bottom:4rem;color:var(--cream)}
+.work-head em{font-style:normal;color:transparent;-webkit-text-stroke:1px rgba(236,229,216,.4)}
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--cream-faint);border:1px solid var(--cream-faint)}
+.card{background:var(--ink);padding:2.2rem 2rem 2.6rem;position:relative;overflow:hidden;transition:background .5s ease;display:flex;flex-direction:column;gap:1.1rem;min-height:15rem}
+.card:hover{background:var(--ink-3)}
+.card:before{content:"";position:absolute;left:0;top:0;width:100%;height:2px;background:linear-gradient(90deg,var(--emerald),transparent);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.card:hover:before{transform:scaleX(1)}
+.card .c-idx{font-family:var(--mono);font-size:.64rem;letter-spacing:.3em;color:var(--emerald-hi)}
+.card h4{font-family:var(--disp);font-size:clamp(1.5rem,2.6vw,2.3rem);letter-spacing:.05em;text-transform:uppercase;color:var(--cream);transition:transform .45s cubic-bezier(.22,1,.36,1)}
+.card:hover h4{transform:translateX(8px)}
+.card p{font-size:.95rem;line-height:1.7;color:var(--cream-dim);max-width:26rem}
+.card .c-tags{margin-top:auto;font-family:var(--mono);font-size:.6rem;letter-spacing:.22em;color:rgba(236,229,216,.4)}
+.card .c-arrow{position:absolute;right:1.6rem;top:1.6rem;font-family:var(--mono);color:var(--emerald);opacity:0;transform:translate(-8px,8px);transition:opacity .4s,transform .4s}
+.card:hover .c-arrow{opacity:1;transform:none}
+@media(max-width:820px){.work-grid{grid-template-columns:1fr}}
+
+/* ---------- FINALE ---------- */
+#finale{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+#finale .f-inner{position:relative;z-index:2;padding:22vh clamp(1.2rem,4vw,3rem) 2rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:2.6rem}
+#finale h2{font-family:var(--disp);font-size:clamp(2.6rem,8.4vw,7.6rem);line-height:.96;text-transform:uppercase;letter-spacing:.04em;color:var(--cream);max-width:22ch}
+#finale h2 em{font-style:normal;color:var(--emerald)}
+.cta-row{display:flex;gap:1.1rem;flex-wrap:wrap;justify-content:center}
+.btn{pointer-events:auto;font-family:var(--mono);font-size:.72rem;letter-spacing:.3em;padding:1.15rem 2.4rem;border:1px solid var(--emerald);transition:all .35s ease;text-transform:uppercase}
+.btn.primary{background:var(--emerald);color:#06110c;font-weight:600}
+.btn.primary:hover{background:var(--emerald-hi);border-color:var(--emerald-hi);transform:translateY(-3px)}
+.btn.ghost{color:var(--cream)}
+.btn.ghost:hover{background:rgba(23,192,127,.12);transform:translateY(-3px)}
+footer{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.6rem clamp(1.2rem,4vw,3rem);border-top:1px solid rgba(236,229,216,.16);font-family:var(--mono);font-size:.62rem;letter-spacing:.26em;color:var(--cream-dim);flex-wrap:wrap;background:linear-gradient(transparent,rgba(4,5,4,.6))}
+footer .f-links{display:flex;gap:1.8rem}
+footer a:hover{color:var(--emerald-hi)}
+
+/* ---------- GRAIN ---------- */
+#grain{position:fixed;inset:-100px;z-index:150;pointer-events:none;opacity:.07;mix-blend-mode:overlay}
+
+/* ---------- REDUCED MOTION ---------- */
+@media (prefers-reduced-motion: reduce){
+  .marquee .track{animation:none}
+  #hero{height:auto}
+  #hero .stage{position:relative;height:100vh}
+  .hero-name .ch,.hero-sub,.hero-eyebrow{opacity:1;transform:none}
+  #pillars{height:auto}
+  #pillars .stage{position:relative;height:auto;min-height:100vh;padding:16vh 0}
+  .pillar{position:relative;top:auto;transform:none;opacity:1;margin-bottom:3rem}
+}
+</style>
+</head>
+<body>
+
+<div id="loader" role="status" aria-label="Loading">
+  <div class="mark">MA<span>•</span>26</div>
+  <div class="bar"><i id="loadbar"></i></div>
+  <div class="pct" id="loadpct">000</div>
+</div>
+
+<nav>
+  <a href="#top" class="n-left">MA•26</a>
+  <div class="n-mid">DEVOPS × PLATFORM × AI</div>
+  <a class="n-right" href="mailto:aitelqadi22@gmail.com">CONTACT</a>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section id="hero" aria-label="Mohammed Ait El Qadi">
+    <div class="stage">
+      <canvas id="orbit"></canvas>
+      <div class="vignette"></div>
+      <div class="hero-copy">
+        <div class="hero-eyebrow" id="eyebrow">DEVOPS &amp; PLATFORM ENGINEER — BUDAPEST</div>
+        <h1 class="hero-name" id="heroName" aria-label="Mohammed Ait El Qadi">
+          <span class="ln" data-text="MOHAMMED"></span>
+          <span class="ln" data-text="AIT EL QADI"></span>
+        </h1>
+        <div class="hero-sub" id="heroSub">I BUILD &amp; AUTOMATE THE <b>CLOUD PLATFORMS</b> AI RUNS ON.</div>
+      </div>
+      <div class="hud">
+        <span class="fr" id="frCounter">FR 001 / 120</span>
+        <span class="scroll-cue" id="scrollCue">SCROLL TO ORBIT ↓</span>
+      </div>
+      <div class="hud-line"><i id="hudLine"></i></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="track" id="mqTrack"></div>
+  </div>
+
+  <!-- STATS -->
+  <section id="stats">
+    <div class="sec-label">THE NUMBERS</div>
+    <div class="stats-grid" id="statsGrid">
+      <div class="stat"><div class="num"><span data-count="15">0</span><em>+</em></div><div class="lbl">Microservices running on EKS &amp; AKS infrastructure I built</div></div>
+      <div class="stat"><div class="num"><span data-count="45">0</span><em>MIN</em></div><div class="lbl">Environment provisioning, down from 6 hours, via Terraform modules</div></div>
+      <div class="stat"><div class="num"><span data-count="200">0</span><em>+</em></div><div class="lbl">Production metrics &amp; alerts shipped with Prometheus and Grafana</div></div>
+      <div class="stat"><div class="num"><span data-count="8">0</span><em></em></div><div class="lbl">Engineering teams on self-service CI/CD templates I authored</div></div>
+      <div class="stat"><div class="num"><span data-count="3">0</span><em>×</em></div><div class="lbl">Star of the Quarter awards at Tata Consultancy Services</div></div>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section id="pillars">
+    <div class="stage">
+      <video id="pillarsVid" muted loop playsinline preload="metadata"></video>
+      <div class="shade"></div>
+      <div class="pillar-idx" id="pillarIdx">01</div>
+      <div class="pillar-wrap">
+        <div class="pillar on" data-i="0">
+          <div class="p-tag">01 — WHAT I DO</div>
+          <h3>The Architect</h3>
+          <p>Multi-cloud, high-availability infrastructure on AWS and Azure. VPCs, EKS, AKS, serverless. Designed to survive failure, audits, and Monday mornings.</p>
+        </div>
+        <div class="pillar" data-i="1">
+          <div class="p-tag">02 — WHAT I DO</div>
+          <h3>The Automator</h3>
+          <p>Terraform, Terragrunt, GitOps, blue-green and canary pipelines. Platforms that provision themselves in 45 minutes instead of 6 hours.</p>
+        </div>
+        <div class="pillar" data-i="2">
+          <div class="p-tag">03 — WHAT I DO</div>
+          <h3>The Builder</h3>
+          <p>AI platforms and production MCP servers. Machine-learning infrastructure and agents wired into real engineering workflows, not demos.</p>
+        </div>
+      </div>
+      <div class="pillar-dots" id="pillarDots"><i class="on"></i><i></i><i></i></div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work">
+    <div class="sec-label">SELECTED WORK</div>
+    <h2 class="work-head">PLATFORMS<br><em>THAT SHIP</em></h2>
+    <div class="work-grid">
+      <article class="card">
+        <span class="c-arrow">↗</span>
+        <div class="c-idx">W.01</div>
+        <h4>ML Platform</h4>
+        <p>Multi-tenant machine-learning platform on SageMaker Unified Studio. Six-plus data squads onboarded to self-serve tooling.</p>
+        <div class="c-tags">AWS · SAGEMAKER · TERRAFORM</div>
+      </article>
+      <article class="card">
+        <span class="c-arrow">↗</span>
+        <div class="c-idx">W.02</div>
+        <h4>Production MCP Servers</h4>
+        <p>MCP servers deployed to production, wiring AI agents into engineering workflows across the organisation.</p>
+        <div class="c-tags">MCP · AI AGENTS · PYTHON</div>
+      </article>
+      <article class="card">
+        <span class="c-arrow">↗</span>
+        <div class="c-idx">W.03</div>
+        <h4>IaC Module Library</h4>
+        <p>One reusable Terraform and Terragrunt library powering 15+ microservices across AWS and Azure. 95% of config drift, gone.</p>
+        <div class="c-tags">TERRAFORM · TERRAGRUNT · CI/CD</div>
+      </article>
+      <article class="card">
+        <span class="c-arrow">↗</span>
+        <div class="c-idx">W.04</div>
+        <h4>CDC Data Platform</h4>
+        <p>Org-wide change-data-capture platform on AWS DMS feeding live Power BI reporting for the whole business.</p>
+        <div class="c-tags">AWS DMS · ETL · POWER BI</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FINALE -->
+  <section id="finale">
+    <video id="finaleVid" muted playsinline preload="metadata"></video>
+    <div class="shade"></div>
+    <div class="f-inner">
+      <h2>WANT A PLATFORM<br>THAT <em>SHIPS ITSELF?</em></h2>
+      <div class="cta-row">
+        <a class="btn primary" href="mailto:aitelqadi22@gmail.com">Get in touch</a>
+        <a class="btn ghost" href="https://github.com/AitelqadiMo" target="_blank" rel="noopener noreferrer">See the work</a>
+      </div>
+    </div>
+    <footer>
+      <span>© 2026 MOHAMMED AIT EL QADI</span>
+      <div class="f-links">
+        <a href="https://github.com/AitelqadiMo" target="_blank" rel="noopener noreferrer">GITHUB</a>
+        <a href="https://www.linkedin.com/in/mohammed-ait-el-qadi" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+        <a href="mailto:aitelqadi22@gmail.com">EMAIL</a>
+      </div>
+      <span>BUDAPEST, HU — MA•26</span>
+    </footer>
+  </section>
+
+</main>
+
+<svg id="grain" aria-hidden="true"><filter id="gf"><feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#gf)"/></svg>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+const ASSETS = /*__ASSETS__*/{"hero": {"frames": 120, "cols": 3, "rows": 3, "fw": 1280, "fh": 720, "sheets": ["assets/sheet_00.webp.b64", "assets/sheet_01.webp.b64", "assets/sheet_02.webp.b64", "assets/sheet_03.webp.b64", "assets/sheet_04.webp.b64", "assets/sheet_05.webp.b64", "assets/sheet_06.webp.b64", "assets/sheet_07.webp.b64", "assets/sheet_08.webp.b64", "assets/sheet_09.webp.b64", "assets/sheet_10.webp.b64", "assets/sheet_11.webp.b64", "assets/sheet_12.webp.b64", "assets/sheet_13.webp.b64"]}, "poster": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CJMuJl0OY7Xa3k4MgVByjcNHBo/d9ec109c-f736-4926-a4a6-7b21ecc49bc5.png", "builder": "https://d8j0ntlcm91z4.cloudfront.net/user_3CJMuJl0OY7Xa3k4MgVByjcNHBo/hf_20260703_164707_5938f644-a474-45c9-9a41-2268c5392585.mp4", "closer": "https://d8j0ntlcm91z4.cloudfront.net/user_3CJMuJl0OY7Xa3k4MgVByjcNHBo/hf_20260703_164645_a6a4a2bd-b890-42af-b8d6-4723a8eb36b0.mp4"}/*__END__*/;
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- Build hero name letters ---------- */
+document.querySelectorAll('.hero-name .ln').forEach(ln=>{
+  const t = ln.dataset.text;
+  ln.innerHTML = [...t].map(c => c===' ' ? '<span class="sp"></span>' : `<span class="ch">${c}</span>`).join('');
+});
+const chars = [...document.querySelectorAll('.hero-name .ch')];
+
+/* ---------- Marquee content ---------- */
+const skills = ['TERRAFORM','KUBERNETES','AWS','AZURE','ARGOCD','JENKINS','PYTHON','PROMETHEUS','GRAFANA','MCP SERVERS','SAGEMAKER','GITOPS','DOCKER','CI/CD','SERVERLESS','OPENSEARCH'];
+const half = skills.map((s,i)=>`<span class="${i%4===3?'fill':''}">${s}</span><span class="fill" style="-webkit-text-stroke:0;font-size:.5em;align-self:center">✦</span>`).join('');
+document.getElementById('mqTrack').innerHTML = half + half;
+
+/* ---------- Frame scrubber (sprite sheets) ---------- */
+const canvas = document.getElementById('orbit');
+const ctx = canvas.getContext('2d');
+let sheets = [], sheetsLoaded = 0, lastFrame = -1, M = null;
+
+function fit(){
+  const dpr = Math.min(devicePixelRatio||1, 1.75);
+  canvas.width = innerWidth*dpr; canvas.height = innerHeight*dpr;
+  lastFrame = -1; if(M) paint(currentFrame);
+}
+let currentFrame = 0;
+function paint(f){
+  if(!M) return;
+  f = Math.max(0, Math.min(M.frames-1, Math.round(f)));
+  const si = Math.floor(f / (M.cols*M.rows));
+  const sheet = sheets[si];
+  if(!sheet || !sheet.complete){ return; }
+  if(f === lastFrame) return; lastFrame = f; currentFrame = f;
+  const li = f % (M.cols*M.rows);
+  const sx = (li % M.cols)*M.fw, sy = Math.floor(li/M.cols)*M.fh;
+  const cw = canvas.width, chh = canvas.height;
+  const s = Math.max(cw/M.fw, chh/M.fh);
+  const dw = M.fw*s, dh = M.fh*s;
+  ctx.fillStyle = '#0a0b0a'; ctx.fillRect(0,0,cw,chh);
+  ctx.drawImage(sheet, sx, sy, M.fw, M.fh, (cw-dw)/2, (chh-dh)/2, dw, dh);
+  document.getElementById('frCounter').textContent = 'FR ' + String(f+1).padStart(3,'0') + ' / ' + M.frames;
+}
+
+/* ---------- Loader ---------- */
+const loadbar = document.getElementById('loadbar'), loadpct = document.getElementById('loadpct');
+function setProgress(p){
+  loadbar.style.transform = `scaleX(${p})`;
+  loadpct.textContent = String(Math.round(p*100)).padStart(3,'0');
+}
+function boot(){
+  document.getElementById('loader').classList.add('done');
+  initScroll();
+}
+if(ASSETS){
+  M = ASSETS.hero;
+  const total = M.sheets.length;
+  let done = 0, booted = false;
+  M.sheets.forEach((url,i)=>{
+    const im = new Image();
+    im.onload = im.onerror = ()=>{
+      done++; sheetsLoaded = Math.max(sheetsLoaded, i+1);
+      setProgress(done/total);
+      if(i===0){ fit(); paint(0); }
+      if(!booted && done >= Math.min(3,total)){ booted = true; setTimeout(boot, 500); }
+      if(done===total && !booted){ booted = true; boot(); }
+    };
+    if(url.endsWith('.b64')){
+      fetch(url).then(r=>r.text()).then(t=>{
+        const bin = atob(t.trim()), bytes = new Uint8Array(bin.length);
+        for(let k=0;k<bin.length;k++) bytes[k] = bin.charCodeAt(k);
+        im.src = URL.createObjectURL(new Blob([bytes],{type:'image/webp'}));
+      }).catch(im.onerror);
+    } else {
+      im.src = url;
+    }
+    sheets.push(im);
+  });
+  document.getElementById('pillarsVid').src = ASSETS.builder;
+  document.getElementById('finaleVid').src = ASSETS.closer;
+}else{
+  setProgress(1); setTimeout(boot, 400);
+}
+addEventListener('resize', fit); fit();
+
+/* ---------- Scroll machinery ---------- */
+function initScroll(){
+  if(reduceMotion){ document.getElementById('eyebrow').classList.add('on'); document.getElementById('heroSub').classList.add('on'); chars.forEach(c=>c.classList.add('on')); wireVideos(); wireStats(); return; }
+
+  gsap.registerPlugin(ScrollTrigger);
+  const lenis = new Lenis({ duration: 1.15, smoothWheel: true });
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add(t => lenis.raf(t*1000));
+  gsap.ticker.lagSmoothing(0);
+
+  const name = document.getElementById('heroName');
+  const eyebrow = document.getElementById('eyebrow');
+  const sub = document.getElementById('heroSub');
+  const cue = document.getElementById('scrollCue');
+  const hudLine = document.getElementById('hudLine');
+  const N = M ? M.frames : 120;
+
+  eyebrow.classList.add('on');
+  /* letters appear across first 34% of scrub; scrubbing back un-reveals */
+  const thresholds = chars.map((_,i)=> 0.02 + (i/(chars.length-1))*0.32 );
+
+  ScrollTrigger.create({
+    trigger: '#hero', start: 'top top', end: 'bottom bottom', scrub: 0.4,
+    onUpdate(self){
+      const p = self.progress;
+      paint(p*(N-1));
+      hudLine.style.transform = `scaleX(${p})`;
+      chars.forEach((c,i)=> c.classList.toggle('on', p >= thresholds[i]));
+      name.style.letterSpacing = (0.14 - 0.125*Math.min(1,p/0.36)) + 'em';
+      sub.classList.toggle('on', p > 0.4);
+      cue.classList.toggle('hide', p > 0.03);
+      const drift = p*(-6);
+      name.parentElement.style.transform = `translateY(${drift}vh)`;
+    }
+  });
+
+  /* Pillars pinned swap */
+  const pillars = [...document.querySelectorAll('.pillar')];
+  const dots = [...document.querySelectorAll('.pillar-dots i')];
+  const idxEl = document.getElementById('pillarIdx');
+  ScrollTrigger.create({
+    trigger: '#pillars', start: 'top top', end: 'bottom bottom', scrub: true,
+    onUpdate(self){
+      const k = Math.min(2, Math.floor(self.progress*3));
+      pillars.forEach((el,i)=> el.classList.toggle('on', i===k));
+      dots.forEach((el,i)=> el.classList.toggle('on', i<=k));
+      idxEl.textContent = '0'+(k+1);
+    }
+  });
+
+  /* Finale text rise */
+  gsap.from('#finale .f-inner', { y: 90, opacity: 0, ease: 'none',
+    scrollTrigger: { trigger: '#finale', start: 'top 80%', end: 'top 25%', scrub: true } });
+
+  wireVideos(); wireStats();
+}
+
+/* ---------- Videos: play only in view; finale plays once and holds ---------- */
+function wireVideos(){
+  const pv = document.getElementById('pillarsVid');
+  const fv = document.getElementById('finaleVid');
+  if(pv.src) new IntersectionObserver(e=>{ e[0].isIntersecting ? pv.play().catch(()=>{}) : pv.pause(); },{threshold:.05}).observe(pv);
+  if(fv.src){
+    fv.addEventListener('ended', ()=>{ fv.currentTime = Math.max(0, fv.duration - 0.05); });
+    new IntersectionObserver(e=>{ if(e[0].isIntersecting){ fv.play().catch(()=>{}); } },{threshold:.2}).observe(fv);
+  }
+}
+
+/* ---------- Stats count-up ---------- */
+function wireStats(){
+  const els = [...document.querySelectorAll('[data-count]')];
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(en=>{
+      if(!en.isIntersecting || en.target.dataset.done) return;
+      en.target.dataset.done = 1;
+      const target = +en.target.dataset.count, t0 = performance.now(), D = 1600;
+      (function tick(t){
+        const p = Math.min(1,(t-t0)/D), e = 1-Math.pow(2,-10*p);
+        en.target.textContent = Math.round(target*e);
+        if(p<1) requestAnimationFrame(tick); else en.target.textContent = target;
+      })(t0);
+    });
+  },{threshold:.4});
+  els.forEach(el=>io.observe(el));
+}
+</script>
+</body>
+</html>
