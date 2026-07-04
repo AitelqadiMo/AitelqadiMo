@@ -41,3 +41,12 @@ tools/build_sprites.py  video -> sprite-sheet pipeline
 
 © 2026 Mohammed Ait El Qadi. Code is free to reference; all media and personal
 content are all rights reserved.
+
+## Interactive layer (v2)
+
+- Boot-log preloader (terminal-style init sequence)
+- Interactive terminal: `whoami`, `stack`, `uptime`, `cat mohammed.yaml`, `sudo hire-me`, `resume`, ...
+- Career-as-pipeline section: five stages, sequential activation, one honest amber stage
+- Credentials section with verifiable IDs (AWS validation number, Microsoft Learn links)
+- CV download straight from the page (base64 sidecar decoded client-side)
+- Live telemetry HUD: FPS, current orbit frame, scroll depth, session uptime
