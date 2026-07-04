@@ -8,13 +8,13 @@
 <meta property="og:title" content="Mohammed Ait El Qadi — DevOps & Platform Engineer">
 <meta property="og:description" content="I build and automate the cloud platforms AI runs on.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://d2ol7oe51mr4n9.cloudfront.net/user_3CJMuJl0OY7Xa3k4MgVByjcNHBo/d9ec109c-f736-4926-a4a6-7b21ecc49bc5.png">
-<link rel="canonical" href="https://aitelqadimo.github.io/AitelqadiMo/">
+<meta property="og:image" content="https://d2ol7oe51mr4n9.cloudfront.net/user_3G20a3gkiMhEulIBga7pqQVv5qP/34aad6c0-637a-471f-b012-dde471d4c9dd.png">
+<link rel="canonical" href="https://www.aitelqadi.dev/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Mohammed Ait El Qadi","jobTitle":"DevOps & Platform Engineer","address":{"@type":"PostalAddress","addressLocality":"Budapest","addressCountry":"HU"},"email":"mailto:aitelqadi22@gmail.com","sameAs":["https://github.com/AitelqadiMo","https://www.linkedin.com/in/mohammed-ait-el-qadi"]}
+{"@context":"https://schema.org","@type":"Person","name":"Mohammed Ait El Qadi","jobTitle":"DevOps & Platform Engineer","url":"https://www.aitelqadi.dev/","address":{"@type":"PostalAddress","addressLocality":"Budapest","addressCountry":"HU"},"email":"mailto:aitelqadi22@gmail.com","sameAs":["https://github.com/AitelqadiMo","https://www.linkedin.com/in/mohammed-ait-el-qadi"]}
 </script>
 <style>
 :root{
@@ -209,6 +209,22 @@ footer a:hover{color:var(--emerald-hi)}
 .term-hints{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.3rem}
 .term-hints button{font-family:var(--mono);font-size:.6rem;letter-spacing:.24em;color:var(--cream-dim);border:1px solid var(--cream-faint);padding:.5rem .9rem;transition:all .3s;text-transform:uppercase}
 .term-hints button:hover{color:var(--emerald-hi);border-color:var(--emerald-dim)}
+
+/* ---------- AFTER HOURS ---------- */
+#afterhours{position:relative;padding:clamp(5rem,13vh,10rem) clamp(1.2rem,4vw,3rem);overflow:hidden;background:var(--ink)}
+#afterhours video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.42) saturate(1.05)}
+#afterhours .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,7,6,.9) 0%,rgba(6,7,6,.45) 55%,rgba(6,7,6,.9) 100%)}
+.ah-wrap{position:relative;z-index:2}
+.ah-cron{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;color:var(--cream-dim);margin:-2.2rem 0 3rem}
+.ah-cron b{color:var(--emerald-hi);font-weight:600}
+.ah-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(236,229,216,.16);border:1px solid rgba(236,229,216,.16)}
+.ah-card{background:rgba(9,10,9,.86);backdrop-filter:blur(3px);padding:1.7rem 1.4rem 1.9rem;display:flex;flex-direction:column;gap:.9rem;transition:background .4s}
+.ah-card:hover{background:rgba(14,18,15,.92)}
+.ah-card svg{width:26px;height:26px;stroke:var(--emerald-hi);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ah-card h6{font-family:var(--disp);font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cream);font-weight:400}
+.ah-card p{font-size:.78rem;line-height:1.6;color:var(--cream-dim)}
+@media(max-width:1080px){.ah-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.ah-grid{grid-template-columns:1fr}}
 
 /* ---------- TELEMETRY HUD ---------- */
 #hudPanel{position:fixed;right:1.1rem;bottom:1.1rem;z-index:120;font-family:var(--mono);font-size:.58rem;letter-spacing:.18em;color:var(--cream-dim);background:rgba(7,8,8,.82);border:1px solid rgba(236,229,216,.16);padding:.7rem .9rem;line-height:1.9;backdrop-filter:blur(6px);display:none}
@@ -518,6 +534,44 @@ footer a:hover{color:var(--emerald-hi)}
     <div class="term-hints" id="termHints"></div>
   </section>
 
+  <!-- AFTER HOURS -->
+  <section id="afterhours">
+    <video id="hobbyVid" muted loop playsinline preload="metadata"></video>
+    <div class="shade"></div>
+    <div class="ah-wrap">
+      <div class="sec-label">AFTER HOURS</div>
+      <h2 class="work-head">STILL<br><em>HUMAN</em></h2>
+      <div class="ah-cron"><b>$</b> crontab -l · <b>0 18 * * *</b> ./after_hours.sh</div>
+      <div class="ah-grid">
+        <div class="ah-card">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5l4.3 3.1-1.6 5h-5.4l-1.6-5z"/><path d="M12 3v4.5M20.6 9.2l-4.3 1.4M17.3 19.4l-2.6-3.8M9.3 15.6l-2.6 3.8M3.4 9.2l4.3 1.4"/></svg>
+          <h6>Football</h6>
+          <p>On the pitch and in the stands. Ask about tactics, lose an hour.</p>
+        </div>
+        <div class="ah-card">
+          <svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5"/><rect x="10" y="10" width="4" height="4"/><path d="M9 7V4M15 7V4M9 20v-3M15 20v-3M7 9H4M7 15H4M20 9h-3M20 15h-3"/></svg>
+          <h6>AI &amp; Tech</h6>
+          <p>New models, new tooling, tested the week they ship.</p>
+        </div>
+        <div class="ah-card">
+          <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13.5" r="4"/><path d="M8.5 7l1.5-2.5h4L15.5 7"/><circle cx="18" cy="10" r=".6"/></svg>
+          <h6>Film &amp; Photo</h6>
+          <p>Framing, lighting, grading. The cinematic bug is real.</p>
+        </div>
+        <div class="ah-card">
+          <svg viewBox="0 0 24 24"><path d="M6.5 8h11a4.5 4.5 0 014.2 6.1l-1 2.7a3 3 0 01-4.9 1L14 16h-4l-1.8 1.8a3 3 0 01-4.9-1l-1-2.7A4.5 4.5 0 016.5 8z"/><path d="M8 11v3M6.5 12.5h3"/><circle cx="16" cy="11.6" r=".7"/><circle cx="18.2" cy="13.4" r=".7"/></svg>
+          <h6>Gaming</h6>
+          <p>Controller in hand. Competitive when it matters.</p>
+        </div>
+        <div class="ah-card">
+          <svg viewBox="0 0 24 24"><path d="M13.5 10.5L20 4"/><path d="M17.5 3.5l3 3"/><path d="M13.8 10.2c1.2 1.2 1.5 2.9.4 4-.7.7-1 .6-1.7 1.3-.9.9.3 2.1-1 3.4-1.3 1.3-3.8 1-5.6-.8s-2.1-4.3-.8-5.6c1.3-1.3 2.5-.1 3.4-1 .7-.7.6-1 1.3-1.7 1.1-1.1 2.8-.8 4 .4z"/><circle cx="9" cy="15" r="1.2"/></svg>
+          <h6>Guitar</h6>
+          <p>Sometimes. The neighbors survive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FINALE -->
   <section id="finale">
     <video id="finaleVid" muted playsinline preload="metadata"></video>
@@ -549,7 +603,7 @@ footer a:hover{color:var(--emerald-hi)}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
 <script>
-const ASSETS = /*__ASSETS__*/{"hero": {"frames": 120, "cols": 3, "rows": 3, "fw": 1280, "fh": 720, "sheets": ["assets/sheet_00.webp.b64", "assets/sheet_01.webp.b64", "assets/sheet_02.webp.b64", "assets/sheet_03.webp.b64", "assets/sheet_04.webp.b64", "assets/sheet_05.webp.b64", "assets/sheet_06.webp.b64", "assets/sheet_07.webp.b64", "assets/sheet_08.webp.b64", "assets/sheet_09.webp.b64", "assets/sheet_10.webp.b64", "assets/sheet_11.webp.b64", "assets/sheet_12.webp.b64", "assets/sheet_13.webp.b64"]}, "poster": "https://d2ol7oe51mr4n9.cloudfront.net/user_3CJMuJl0OY7Xa3k4MgVByjcNHBo/d9ec109c-f736-4926-a4a6-7b21ecc49bc5.png", "builder": "https://d8j0ntlcm91z4.cloudfront.net/user_3CJMuJl0OY7Xa3k4MgVByjcNHBo/hf_20260703_164707_5938f644-a474-45c9-9a41-2268c5392585.mp4", "closer": "https://d8j0ntlcm91z4.cloudfront.net/user_3CJMuJl0OY7Xa3k4MgVByjcNHBo/hf_20260703_164645_a6a4a2bd-b890-42af-b8d6-4723a8eb36b0.mp4", "resume": "assets/resume.pdf.b64"}/*__END__*/;
+const ASSETS = /*__ASSETS__*/{"hero": {"frames": 120, "cols": 3, "rows": 3, "fw": 1280, "fh": 720, "sheets": ["assets/sheet_00.webp.b64", "assets/sheet_01.webp.b64", "assets/sheet_02.webp.b64", "assets/sheet_03.webp.b64", "assets/sheet_04.webp.b64", "assets/sheet_05.webp.b64", "assets/sheet_06.webp.b64", "assets/sheet_07.webp.b64", "assets/sheet_08.webp.b64", "assets/sheet_09.webp.b64", "assets/sheet_10.webp.b64", "assets/sheet_11.webp.b64", "assets/sheet_12.webp.b64", "assets/sheet_13.webp.b64"]}, "poster": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G20a3gkiMhEulIBga7pqQVv5qP/34aad6c0-637a-471f-b012-dde471d4c9dd.png", "builder": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G20a3gkiMhEulIBga7pqQVv5qP/36647c01-fe02-4dee-b2b3-c86968b53a9f.mp4", "closer": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G20a3gkiMhEulIBga7pqQVv5qP/1c5aef15-db40-4943-b430-a96b36443721.mp4", "hobby": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G20a3gkiMhEulIBga7pqQVv5qP/0a67a999-6867-4cec-b1d1-3139911b58d3.mp4", "resume": "assets/resume.pdf.b64"}/*__END__*/;
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* ---------- Build hero name letters ---------- */
@@ -628,6 +682,7 @@ if(ASSETS){
   });
   document.getElementById('pillarsVid').src = ASSETS.builder;
   document.getElementById('finaleVid').src = ASSETS.closer;
+  if(ASSETS.hobby) document.getElementById('hobbyVid').src = ASSETS.hobby;
 }else{
   setProgress(1); setTimeout(boot, 400);
 }
@@ -695,7 +750,9 @@ function initScroll(){
 function wireVideos(){
   const pv = document.getElementById('pillarsVid');
   const fv = document.getElementById('finaleVid');
+  const hv = document.getElementById('hobbyVid');
   if(pv.src) new IntersectionObserver(e=>{ e[0].isIntersecting ? pv.play().catch(()=>{}) : pv.pause(); },{threshold:.05}).observe(pv);
+  if(hv && hv.src) new IntersectionObserver(e=>{ e[0].isIntersecting ? hv.play().catch(()=>{}) : hv.pause(); },{threshold:.05}).observe(hv);
   if(fv.src){
     fv.addEventListener('ended', ()=>{ fv.currentTime = Math.max(0, fv.duration - 0.05); });
     new IntersectionObserver(e=>{ if(e[0].isIntersecting){ fv.play().catch(()=>{}); } },{threshold:.2}).observe(fv);
@@ -840,7 +897,8 @@ languages: [python, bash, groovy, sql]
 human_languages: [english, french, arabic]
 status: open_to_interesting_problems`;
   const CMDS = {
-    help: ()=>'commands: whoami · stack · certs · work · uptime · cat mohammed.yaml · resume · contact · sudo hire-me · telemetry · clear',
+    help: ()=>'commands: whoami · stack · certs · work · hobbies · uptime · cat mohammed.yaml · resume · contact · sudo hire-me · telemetry · clear',
+    hobbies: ()=>'football (pitch + stands) · ai & new tech · film-making & photography\ngaming · guitar (occasionally, bravely)\nscroll down: the AFTER HOURS section has the footage.',
     whoami: ()=>'Mohammed Ait El Qadi — DevOps & Platform Engineer, Budapest.\nAWS Certified Solutions Architect. I build the cloud platforms AI runs on:\nmulti-cloud infra, self-provisioning pipelines, production MCP servers.',
     stack: ()=>'aws · azure · terraform · terragrunt · kubernetes (eks/aks) · docker\njenkins · github actions · gitlab ci · spinnaker · argocd · gitops\nprometheus · grafana · opensearch · python · bash · sagemaker · mcp',
     certs: ()=>'aws solutions architect associate (2026) · github copilot (2026)\nazure fundamentals az-900 (2025) · ccna (2024)\nscroll up or run: open credentials',
@@ -849,7 +907,7 @@ status: open_to_interesting_problems`;
     'cat mohammed.yaml': ()=>esc(YAML),
     ls: ()=>'work/  pipeline/  credentials/  terminal/  mohammed.yaml  resume.pdf',
     resume: ()=>{ downloadCV(); return 'fetching resume.pdf … <span class="ok">saved</span> — check your downloads.'; },
-    contact: ()=>'email: <a href="mailto:aitelqadi22@gmail.com">aitelqadi22@gmail.com</a>\ngithub: <a href="https://github.com/AitelqadiMo" target="_blank" rel="noopener noreferrer">github.com/AitelqadiMo</a>\nlinkedin: <a href="https://www.linkedin.com/in/mohammed-ait-el-qadi" target="_blank" rel="noopener noreferrer">/in/mohammed-ait-el-qadi</a>',
+    contact: ()=>'site: <a href="https://www.aitelqadi.dev" target="_blank" rel="noopener noreferrer">aitelqadi.dev</a>\nemail: <a href="mailto:aitelqadi22@gmail.com">aitelqadi22@gmail.com</a>\ngithub: <a href="https://github.com/AitelqadiMo" target="_blank" rel="noopener noreferrer">github.com/AitelqadiMo</a>\nlinkedin: <a href="https://www.linkedin.com/in/mohammed-ait-el-qadi" target="_blank" rel="noopener noreferrer">/in/mohammed-ait-el-qadi</a>',
     'sudo hire-me': ()=>'<span class="ok">[sudo] permission granted.</span>\nopening a channel to Mohammed … <a href="mailto:aitelqadi22@gmail.com?subject=Approval%20granted%20—%20let%27s%20talk">send the offer ↗</a>',
     telemetry: ()=>{ hud.classList.toggle('on'); return 'telemetry hud: ' + (hud.classList.contains('on') ? 'on' : 'off'); },
     clear: ()=>{ out.innerHTML=''; return null; },
