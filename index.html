@@ -20,7 +20,8 @@
 <meta name="twitter:description" content="I build & automate the cloud platforms AI runs on.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Mohammed Ait El Qadi","jobTitle":"DevOps & Platform Engineer","url":"https://www.aitelqadi.dev/","address":{"@type":"PostalAddress","addressLocality":"Budapest","addressCountry":"HU"},"email":"mailto:aitelqadi22@gmail.com","sameAs":["https://github.com/AitelqadiMo","https://www.linkedin.com/in/mohammed-ait-el-qadi"]}
 </script>
@@ -31,7 +32,7 @@
   --cream:#ece5d8; --cream-dim:rgba(236,229,216,.55); --cream-faint:rgba(236,229,216,.14);
   --mono:'JetBrains Mono',ui-monospace,monospace;
   --body:'Space Grotesk',system-ui,sans-serif;
-  --disp:'Anton',impact,sans-serif;
+  --disp:'Clash Display','Archivo Black',sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scrollbar-width:thin;scrollbar-color:var(--emerald) var(--ink)}
@@ -68,7 +69,8 @@ nav .cv-link{color:var(--emerald-hi)}
 .hero-copy{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;padding:0 4vw;text-align:center}
 .hero-eyebrow{font-family:var(--mono);font-size:clamp(.58rem,1vw,.72rem);letter-spacing:.5em;color:var(--emerald-hi);margin-bottom:2.2vh;opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s ease}
 .hero-eyebrow.on{opacity:1;transform:none}
-.hero-name{font-family:var(--disp);font-size:clamp(3.4rem,12.5vw,11.5rem);line-height:.92;color:var(--cream);text-transform:uppercase;letter-spacing:.14em;transition:letter-spacing .1s linear}
+.hero-name{font-family:var(--disp);font-weight:700;font-size:clamp(3rem,10.4vw,9.8rem);line-height:.94;color:var(--cream);text-transform:uppercase;letter-spacing:.06em;transition:letter-spacing .1s linear}
+#loader .mark,.marquee span,.stat .num,.pillar h3,.pillar-idx,.work-head,.card h4,.cred h4,.stage h4,#finale h2,.ah-card h6{font-weight:600}
 .hero-name .ln{display:block;white-space:nowrap}
 .hero-name .ch{display:inline-block;opacity:0;transform:translateY(.55em) rotate(4deg);transition:opacity .55s cubic-bezier(.22,1,.36,1),transform .55s cubic-bezier(.22,1,.36,1)}
 .hero-name .ch.on{opacity:1;transform:none}
@@ -736,7 +738,7 @@ function initScroll(){
       paint(p*(N-1));
       hudLine.style.transform = `scaleX(${p})`;
       chars.forEach((c,i)=> c.classList.toggle('on', p >= thresholds[i]));
-      name.style.letterSpacing = (0.14 - 0.125*Math.min(1,p/0.36)) + 'em';
+      name.style.letterSpacing = (0.06 - 0.05*Math.min(1,p/0.36)) + 'em';
       sub.classList.toggle('on', p > 0.4);
       cue.classList.toggle('hide', p > 0.03);
       const drift = p*(-6);
