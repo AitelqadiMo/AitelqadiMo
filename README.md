@@ -8,6 +8,13 @@ I currently work at TCS on a large European insurance platform, where I design
 reusable infrastructure, self-service CI/CD, and observability for teams
 running microservices on Kubernetes across AWS and Azure.
 
+### 🌐 [aitelqadi.dev →](https://www.aitelqadi.dev)
+
+My portfolio: a cinematic scroll site with my projects, verifiable credentials,
+CV download, and a terminal that answers `whoami`. Built with GSAP, Lenis, and
+a canvas frame-scrub engine.
+
+
 ### What I work with
 
 - **Cloud:** AWS, Azure
@@ -32,3 +39,7 @@ delivery, and platform automation.
 
 - LinkedIn: linkedin.com/in/mohammed-ait-el-qadi
 - Email: aitelqadi22@gmail.com
+
+### Find me
+
+[**Portfolio**](https://www.aitelqadi.dev) · [**LinkedIn**](https://www.linkedin.com/in/mohammed-ait-el-qadi) · [**Email**](mailto:aitelqadi22@gmail.com)
