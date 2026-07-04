@@ -36,7 +36,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scrollbar-width:thin;scrollbar-color:var(--emerald) var(--ink)}
 html,body{background:var(--ink)}
-body{color:var(--cream);font-family:var(--body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{color:var(--cream);font-family:var(--body);overflow-x:hidden;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
 ::selection{background:var(--emerald);color:var(--ink)}
 a{color:inherit;text-decoration:none}
 button{font:inherit;border:0;background:none;cursor:pointer}
@@ -62,7 +62,7 @@ nav .cv-link{color:var(--emerald-hi)}
 
 /* ---------- HERO ---------- */
 #hero{height:420vh;position:relative}
-#hero .stage{position:sticky;top:0;height:100vh;overflow:hidden}
+#hero .stage{position:sticky;top:0;height:100vh;height:100dvh;overflow:hidden}
 #orbit{position:absolute;inset:0;width:100%;height:100%;display:block;background:var(--ink)}
 .vignette{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 42%,rgba(4,5,4,.72) 100%)}
 .hero-copy{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;padding:0 4vw;text-align:center}
@@ -106,7 +106,7 @@ nav .cv-link{color:var(--emerald-hi)}
 
 /* ---------- PILLARS ---------- */
 #pillars{height:340vh;position:relative}
-#pillars .stage{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center}
+#pillars .stage{position:sticky;top:0;height:100vh;height:100dvh;overflow:hidden;display:flex;align-items:center}
 #pillars video,#finale video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.5) saturate(1.05)}
 #pillars .shade,#finale .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,7,6,.92) 0%,rgba(6,7,6,.55) 55%,rgba(6,7,6,.25) 100%)}
 .pillar-wrap{position:relative;z-index:2;padding:0 clamp(1.2rem,5vw,4rem);width:100%;max-width:1200px}
@@ -637,12 +637,23 @@ function fit(){
   lastFrame = -1; if(M) paint(currentFrame);
 }
 let currentFrame = 0;
+function sheetReady(s){ return s && s.complete && s.naturalWidth > 0; }
 function paint(f){
   if(!M) return;
   f = Math.max(0, Math.min(M.frames-1, Math.round(f)));
-  const si = Math.floor(f / (M.cols*M.rows));
-  const sheet = sheets[si];
-  if(!sheet || !sheet.complete){ return; }
+  const per = M.cols*M.rows;
+  let sheet = sheets[Math.floor(f / per)];
+  if(!sheetReady(sheet)){
+    /* no gap, no flash: fall back to the nearest earlier frame whose sheet is loaded */
+    let fi = f;
+    while(fi > 0){
+      fi--;
+      const s2 = sheets[Math.floor(fi / per)];
+      if(sheetReady(s2)){ f = fi; sheet = s2; break; }
+    }
+    if(!sheetReady(sheet)) return;
+  }
+  const si = Math.floor(f / per);
   if(f === lastFrame) return; lastFrame = f; currentFrame = f;
   const li = f % (M.cols*M.rows);
   const sx = (li % M.cols)*M.fw, sy = Math.floor(li/M.cols)*M.fh;
